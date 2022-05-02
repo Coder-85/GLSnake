@@ -6,6 +6,10 @@
 #include "Food.hpp"
 #include "utils.hpp"
 
+#ifdef WIN32
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#endif
+
 Food f;
 Snake s;
 
