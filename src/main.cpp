@@ -1,3 +1,4 @@
+#define NDEBUG
 #include <GL/freeglut.h>
 #include <iostream>
 #include <time.h>
@@ -40,6 +41,7 @@ void checkFoodEaten()
 void init()
 {
     setGameOver(false);
+    setGamePaused(false);
     s = Snake();
     f = Food();
     int x, y;
@@ -133,7 +135,7 @@ int main(int argc, char **argv)
     glClearColor(0, 0, 0, 1);
     glCullFace(GL_BACK);
 
-    srand (time(NULL));
+    srand(time(NULL));
     init();
 
     glutMainLoop();

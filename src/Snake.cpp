@@ -1,6 +1,6 @@
 #include <iostream>
 #include <GL/freeglut.h>
-#include "Snake.h"
+#include "Snake.hpp"
 
 Snake::Snake()
     : m_direction(SnakeDirection::Up), m_length(3),

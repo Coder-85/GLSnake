@@ -15,15 +15,21 @@ LINK_DIRECTORIES(
 )
 
 add_executable(GLSnake
+            ${CMAKE_SOURCE_DIR}/include/macros.hpp
+            ${CMAKE_SOURCE_DIR}/include/vars.hpp
             ${CMAKE_SOURCE_DIR}/src/main.cpp
+            ${CMAKE_SOURCE_DIR}/include/Food.hpp
             ${CMAKE_SOURCE_DIR}/src/Food.cpp
+            ${CMAKE_SOURCE_DIR}/include/Snake.hpp
             ${CMAKE_SOURCE_DIR}/src/Snake.cpp
+            ${CMAKE_SOURCE_DIR}/include/utils.hpp
             ${CMAKE_SOURCE_DIR}/src/utils.cpp
             ${CMAKE_SOURCE_DIR}/app.rc
 )
 
 target_link_libraries(GLSnake
-    glut32
+    freeglut
+    opengl32
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

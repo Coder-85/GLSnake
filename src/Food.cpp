@@ -2,9 +2,9 @@
 #include <GL/freeglut.h>
 #include <time.h>
 #include <math.h>
-#include "Food.h"
-#include "Snake.h"
-#include "vars.h"
+#include "Food.hpp"
+#include "Snake.hpp"
+#include "vars.hpp"
 
 Food::Food()
     : m_radius(0.5f) {}

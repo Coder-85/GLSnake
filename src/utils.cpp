@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <GL/freeglut.h>
-#include "Snake.h"
+#include "Snake.hpp"
 
 Snake *s;
-bool isGameOver = false;
-bool isGamePaused = false;
+bool isGameOver;
+bool isGamePaused;
 
 void setSnake(Snake *newSnake)
 {
