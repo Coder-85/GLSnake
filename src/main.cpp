@@ -1,6 +1,6 @@
-#define NDEBUG
-#include <GL/freeglut.h>
 #include <iostream>
+#define FREEGLUT_STATIC
+#include <GL/freeglut.h>
 #include <time.h>
 #include <math.h>
 #include "Snake.hpp"
@@ -49,7 +49,7 @@ void init()
     f.setFoodX(x);
     f.setFoodY(y);
     setSnake(&s);
-    glutTimerFunc(250, snakeMovement, s.getDirection());
+    glutTimerFunc(150, snakeMovement, s.getDirection());
 }
 
 static void keyPressHandle(unsigned char key, int x, int y)

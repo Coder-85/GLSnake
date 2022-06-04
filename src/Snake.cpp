@@ -12,6 +12,18 @@ Snake::Snake()
     pos[1][1] = 20;
     pos[2][0] = 20;
     pos[2][1] = 19;
+    grid[pos[0][0]][pos[0][1]] = 1;
+    grid[pos[1][0]][pos[1][1]] = 1;
+    grid[pos[2][0]][pos[2][1]] = 1;
+    
+    for (int i = 0; i < ROWS; i++)
+    {
+        for (int j = 0; j < COLS; j++)
+        {
+            grid[i][j] = 0;
+        }
+    }
+    
 }
 
 Snake::~Snake() {}

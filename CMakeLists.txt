@@ -10,9 +10,11 @@ INCLUDE_DIRECTORIES(
     ${CMAKE_SOURCE_DIR}/include/
 )
 
-LINK_DIRECTORIES(
-    ${CMAKE_SOURCE_DIR}/lib/
-)
+if (EXISTS ${CMAKE_SOURCE_DIR}/lib)
+	LINK_DIRECTORIES(
+		${CMAKE_SOURCE_DIR}/lib/
+	)
+endif()
 
 add_executable(GLSnake
             ${CMAKE_SOURCE_DIR}/include/macros.hpp
@@ -29,7 +31,6 @@ add_executable(GLSnake
 
 target_link_libraries(GLSnake
     freeglut
-    opengl32
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

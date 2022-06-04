@@ -105,7 +105,7 @@ void snakeMovement(int direction)
     }
 }
 
-void printText(int x, int y, std::string text, void *font = GLUT_BITMAP_TIMES_ROMAN_24) 
+void displayText(int x, int y, std::string text, void *font = GLUT_BITMAP_TIMES_ROMAN_24) 
 {
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
@@ -133,7 +133,7 @@ void checkGame()
 {
     if (!isGameOver && !isGamePaused)
     {
-        printText(17, 39, "Score: " + std::to_string((s->getLength() - 3) * 10), GLUT_BITMAP_HELVETICA_18);
+        displayText(17, 39, "Score: " + std::to_string((s->getLength() - 3) * 10), GLUT_BITMAP_HELVETICA_18);
     }
 
     if (isGamePaused)
@@ -146,9 +146,9 @@ void checkGame()
             glVertex2d(40, 0);
         glEnd();
         glColor3d(1, 1, 1);
-        printText(17, 20, "PAUSED");
-        printText(14, 18, "Press 'P' to resume");
-        printText(15, 16, "  Your score: " + std::to_string((s->getLength() - 3) * 10));
+        displayText(17, 20, "PAUSED");
+        displayText(14, 18, "Press 'P' to resume");
+        displayText(15, 16, "  Your score: " + std::to_string((s->getLength() - 3) * 10));
     }
 
     else if(isGameOver)
@@ -161,8 +161,8 @@ void checkGame()
             glVertex2d(40, 0);
         glEnd();
         glColor3d(1, 1, 1);
-        printText(15, 20, "GAME OVER");
-        printText(14, 18, "       Your score: " + std::to_string((s->getLength() - 3) * 10), GLUT_BITMAP_HELVETICA_18);
-        printText(14, 16, "Press 'R' to restart");
+        displayText(15, 20, "GAME OVER");
+        displayText(14, 18, "       Your score: " + std::to_string((s->getLength() - 3) * 10), GLUT_BITMAP_HELVETICA_18);
+        displayText(14, 16, "Press 'R' to restart");
     }
 }

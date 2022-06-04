@@ -1,5 +1,5 @@
 # GLSnake
-GLSnake is a classic snake game made using OpenGL.
+GLSnake is a classic snake game made with OpenGL.
 
 ## Controls
 WASD or Arrow Keys: Move
@@ -19,8 +19,5 @@ $ cmake --build build --target GLSnake
 ```
 5. Now you can run the game!
 
-N.B: There might be some issues while building using Visual Studio build tools(only in Release mode). However I was successful in building using nmake.
-So, I recommend you to use nmake if you are using Visual Studio.
-
 ## Precompiled Binaries
-Precompiled binaries for windows(x64) can be found in the Releases page.
+Precompiled binaries for Windows(x64) can be found in the Releases page.
